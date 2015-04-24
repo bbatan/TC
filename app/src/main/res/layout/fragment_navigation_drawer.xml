@@ -2,14 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_dark"
+    android:background="@android:color/white"
     tools:context="com.noname.batanbensigar.transientcontacts.NavigationDrawerFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/nav_header_frame"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:elevation="2dp" android:gravity="bottom">
 
         <ImageView
             android:id="@+id/img_BG"
@@ -21,14 +21,21 @@
             android:scaleType="fitXY"
             android:src="@drawable/navbar_bg" />
 
-    </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:paddingLeft="16dp"
+            android:textColor="@android:color/white"
+            android:layout_alignBottom="@id/img_BG"
+            android:gravity="bottom" android:text="noname@gmail.com" />
+    </RelativeLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/nav_drawer_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/nav_header_frame">
-
-    </android.support.v7.widget.RecyclerView>
+        android:layout_below="@id/nav_header_frame"
+        android:layout_marginTop="8dp"></android.support.v7.widget.RecyclerView>
 
 </RelativeLayout>

@@ -65,8 +65,9 @@ public class NavigationDrawerFragment extends Fragment {
 
     public static List<NavMenu> getData() {
         List<NavMenu> navMenuList = new ArrayList<>();
-        int[] iconList = {R.drawable.ic_action_all_contacts, R.drawable.ic_action_need_attention, R.drawable.ic_action_dnd, R.drawable.ic_action_settings};
-        String[] titleList = {"All contacts", "Needs attention", "Do not disturb", "Settings"};
+
+        int[] iconList = {R.drawable.ic_nav_all_contacts, R.drawable.ic_nav_need_attention, R.drawable.ic_nav_auto_collected, R.drawable.ic_nav_settings, R.drawable.ic_nav_help};
+        String[] titleList = {"All contacts", "Needs attention", "Do not disturb", "Settings","Help & Feedback"};
 
         for (int i = 0; i < iconList.length && i < titleList.length; i++) {
             NavMenu currentMenu = new NavMenu();
