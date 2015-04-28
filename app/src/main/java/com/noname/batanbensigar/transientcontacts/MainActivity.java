@@ -1,11 +1,14 @@
 package com.noname.batanbensigar.transientcontacts;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -22,6 +25,16 @@ public class MainActivity extends ActionBarActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         NavigationDrawerFragment drawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_drawer);
         drawerFragment.setUp(R.id.fragment_drawer, (DrawerLayout)findViewById(R.id.drawer_layout),toolbar);
+
+        Button btnStart = (Button) findViewById(R.id.btnStartEndCall);
+        btnStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CallEndActivity.class);
+                intent.putExtra("ContactNumber","+91 984 024 7755");
+                startActivity(intent);
+            }
+        });
     }
 
 

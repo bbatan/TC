@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="status_bar_pad">24dp</dimen>
     <dimen name="title_area_height">240dp</dimen>
 </resources>

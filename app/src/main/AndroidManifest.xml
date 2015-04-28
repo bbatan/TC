@@ -16,6 +16,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".CallEndActivity"
+            android:label="@string/title_activity_call_end"
+            android:noHistory="true" >
+        </activity>
+        <activity
+            android:name=".SaveContact"
+            android:label="@string/title_activity_save_contact" >
+        </activity>
+        <activity
+            android:name=".ContactSaved"
+            android:label="@string/title_activity_contact_saved" >
+        </activity>
     </application>
 
 </manifest>

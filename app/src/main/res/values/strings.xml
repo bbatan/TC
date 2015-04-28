@@ -10,4 +10,16 @@
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
     <string name="default_nav_menu_title">Menu 1</string>
+    <string name="title_activity_call_end">CallEndActivity</string>
+    <string name="temp_contact_number">+91 984 024 7755</string>
+    <string name="lbl_contact_question">Add to Transient Contacts?</string>
+    <string name="lbl_home_hint">Use Transient Contacts to apply retention period to temporary contacts. These contacts are automatically added to and removed from your People list based on their retention period.</string>
+    <string name="title_activity_save_contact">SaveContact</string>
+    <string name="default_text_contact_field">+00 000 000 0000</string>
+    <string name="default_text_contact_add">Adding this contact to Transient Contacts. Cancel if you changed your mind.</string>
+    <string name="default_text_contact_name">Full name</string>
+    <string name="default_text_retention_days">10</string>
+    <string name="default_text_notes">Notes</string>
+    <string name="title_activity_contact_saved">ContactSaved</string>
+    <string name="save_button_text">SAVE</string>
 </resources>

@@ -1,0 +1,187 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.noname.batanbensigar.transientcontacts.SaveContact">
+
+    <RelativeLayout
+        android:id="@+id/temp_header_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_area_height"
+        android:background="@color/primary"
+        android:elevation="2dp"
+        android:gravity="bottom">
+
+        <TextView
+            android:id="@+id/fld_contact_number"
+            style="@style/ContactText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_text_contact_field" />
+
+        <TextView
+            android:id="@+id/temp_title_text"
+            style="@style/MediumText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fld_contact_number"
+            android:gravity="bottom"
+            android:paddingBottom="16dp"
+            android:text="@string/default_text_contact_add" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:layout_marginLeft="@dimen/side_border_padding"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_icon_phone" />
+
+            <EditText
+                android:id="@+id/fld_edit_contact_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/edit_field_padding"
+                android:hint="@string/default_text_contact_field"
+                android:imeOptions="actionNext"
+                android:inputType="phone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:layout_marginLeft="@dimen/side_border_padding"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_icon_name" />
+
+            <EditText
+                android:id="@+id/fld_edit_contact_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/edit_field_padding"
+                android:hint="@string/default_text_contact_name"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+        <!--style="@style/EditText"-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:layout_marginLeft="@dimen/side_border_padding"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_icon_alarm" />
+
+            <TextView
+                style="@style/EditLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/edit_field_padding"
+                android:text="Save for " />
+
+            <EditText
+                android:id="@+id/fld_edit_retention_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="3"
+                android:hint="@string/default_text_retention_days"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="3" />
+
+            <TextView
+                style="@style/EditLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" days" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:layout_marginLeft="@dimen/side_border_padding"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_icon_delete" />
+
+            <TextView
+                style="@style/EditLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/edit_field_padding"
+                android:text="Delete without confirmation? " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/side_border_padding"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:paddingTop="8dp"
+                android:src="@drawable/ic_icon_notes" />
+
+            <EditText
+                android:id="@+id/fld_edit_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/edit_field_padding"
+                android:gravity="left|top"
+                android:hint="@string/default_text_notes"
+                android:imeOptions="actionGo"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:maxLength="255"
+                android:maxLines="5"
+                android:scrollbars="vertical" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:gravity="bottom|center"
+        android:orientation="vertical"
+        android:padding="@dimen/side_border_padding">
+
+        <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:text="@string/save_button_text" />
+    </LinearLayout>
+</LinearLayout>
