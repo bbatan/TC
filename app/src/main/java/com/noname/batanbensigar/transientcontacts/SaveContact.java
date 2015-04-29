@@ -1,6 +1,7 @@
 package com.noname.batanbensigar.transientcontacts;
 
 import android.content.Intent;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,6 +24,13 @@ public class SaveContact extends ActionBarActivity {
 
         TextView txtNumberEdit = (TextView) findViewById(R.id.fld_edit_contact_number);
         txtNumberEdit.setText(sNumber);
+
+        if (savedInstanceState == null) {
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            FloatingActionButtonBasicFragment fragment = new FloatingActionButtonBasicFragment();
+            transaction.replace(R.id.sample_content_fragment, fragment);
+            transaction.commit();
+        }
     }
 
 

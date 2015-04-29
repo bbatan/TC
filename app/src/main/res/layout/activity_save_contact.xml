@@ -30,13 +30,21 @@
             android:paddingBottom="16dp"
             android:text="@string/default_text_contact_add" />
     </RelativeLayout>
-
+    <FrameLayout
+        android:id="@+id/sample_content_fragment"
+        android:layout_weight="3"
+        android:elevation="@dimen/fab_elevation"
+        android:layout_marginTop="-28dp"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="right"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="48dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/margin_content_after_fab"
         android:orientation="vertical">
 
         <LinearLayout
