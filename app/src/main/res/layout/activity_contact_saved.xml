@@ -5,8 +5,18 @@
     tools:context="com.noname.batanbensigar.transientcontacts.ContactSaved">
 
     <TextView
+        android:id="@+id/lbl_saved_contact_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_world" />
-
+    <TextView
+        android:id="@+id/lbl_saved_contact_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+    <TextView
+        android:id="@+id/lbl_saved_notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
 </RelativeLayout>

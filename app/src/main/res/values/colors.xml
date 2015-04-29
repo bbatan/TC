@@ -6,16 +6,12 @@
     <color name="primary">#CDDC39</color>
     <color name="primary_dark">#AFB42B</color>
     <color name="primary_light">#F0F4C3</color>
-    <color name="accent">#FF4081</color>
+    <color name="accent">@color/md_pink_500</color>
+    <color name="accent_muted">@color/md_pink_300</color>
     <color name="primary_text">#212121</color>
     <color name="secondary_text">#727272</color>
     <color name="icons">#212121</color>
     <color name="divider">#B6B6B6</color>
-
-    <color name="fab_color_1">#ff5252</color>
-    <color name="fab_color_1_muted">#ff8080</color>
-    <color name="fab_color_2">#9c27b0</color>
-    <color name="fab_color_2_muted">#a56ab0</color>
 
 
     <!--Blue Grey & Orange-->

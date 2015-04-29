@@ -1,9 +1,11 @@
 package com.noname.batanbensigar.transientcontacts;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 public class ContactSaved extends ActionBarActivity {
@@ -12,6 +14,10 @@ public class ContactSaved extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_saved);
+
+        Intent intent = getIntent();
+        String sNumber = intent.getStringExtra("ContactNumber");
+        ((TextView) findViewById(R.id.lbl_saved_contact_number)).setText(sNumber);
     }
 
 
