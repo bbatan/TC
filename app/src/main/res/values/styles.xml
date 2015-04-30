@@ -66,4 +66,8 @@
         <item name="android:background">@drawable/red_circle</item>
         <item name="android:src">@drawable/ic_action_no</item>
     </style>
+    <style name="ImageButton.DND">
+        <item name="android:background">@drawable/grey_circle</item>
+        <item name="android:src">@drawable/ic_action_dnd</item>
+    </style>
 </resources>

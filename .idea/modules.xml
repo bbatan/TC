@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TransientContacts.iml" filepath="$PROJECT_DIR$/TransientContacts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TC.iml" filepath="$PROJECT_DIR$/TC.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
