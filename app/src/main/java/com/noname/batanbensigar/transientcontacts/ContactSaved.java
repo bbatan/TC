@@ -1,8 +1,8 @@
 package com.noname.batanbensigar.transientcontacts;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -18,6 +18,23 @@ public class ContactSaved extends ActionBarActivity {
         Intent intent = getIntent();
         String sNumber = intent.getStringExtra("ContactNumber");
         ((TextView) findViewById(R.id.lbl_saved_contact_number)).setText(sNumber);
+        String sName = intent.getStringExtra("ContactName");
+        ((TextView) findViewById(R.id.lbl_saved_contact_name)).setText(sName);
+
+        int nDays = intent.getIntExtra("RetentionPeriod", 0);
+        if (nDays > 0) {
+            String retentionText = "";
+            retentionText = "saved for " + nDays + " day(s)";
+            ((TextView) findViewById(R.id.lbl_saved_days)).setText(retentionText);
+        }else {
+            ((TextView) findViewById(R.id.lbl_saved_days)).setText("not saved after today");
+        }
+        boolean bConfirm = intent.getBooleanExtra("ConfirmDelete", true);
+        if (bConfirm) ((TextView) findViewById(R.id.lbl_saved_confirmation)).setText("deleted after confirmation");
+        else ((TextView) findViewById(R.id.lbl_saved_confirmation)).setText("deleted without confirmation");
+
+        String sNote = intent.getStringExtra("Notes");
+        ((TextView) findViewById(R.id.lbl_saved_notes)).setText(sNote);
     }
 
 
